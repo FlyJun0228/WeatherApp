@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+  <RelativeLayout
+      android:background="@color/purple_700"
+      android:paddingTop="5dp"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <EditText
+        android:textColor="#ffffff"
+        android:id="@+id/ed_city"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="输入城市名称"
+        android:textColorHint="#ffffff" />
+   <ImageButton
+       android:onClick="SearchOnclick"
+       android:background="@drawable/search"
+       android:layout_toRightOf="@+id/ed_city"
+       android:id="@+id/searchcity"
+       app:defaultQueryHint="输入城市名称"
+       android:layout_width="35dp"
+       android:layout_height="35dp"/>
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/tv_city"
+        android:background="@drawable/city" />
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="城市"
+        android:textColor="#000000"
+        android:textSize="18dp" />
+    <Spinner
+        android:layout_alignParentRight="true"
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:background="@drawable/wendu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/tv_wendu" />
+  <TextView
+      android:textSize="28dp"
+      android:id="@+id/tv_wendu"
+      android:text="温度"
+      android:gravity="center"
+      android:padding="5dp"
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/tv_pm"
+        android:background="@drawable/shidu" />
+    <TextView
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:id="@+id/tv_pm"
+        android:text="pm"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <ImageView
+        android:background="@drawable/quality"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/tv_zhiling" />
+    <TextView
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:id="@+id/tv_zhiling"
+        android:text="空气质量"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+  </RelativeLayout>
+  <ListView
+      android:divider="#FFFFFF"
+      android:dividerHeight="5dp"
+      android:id="@+id/listview_cityinfo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:ignore="MissingConstraints" />
+</LinearLayout>

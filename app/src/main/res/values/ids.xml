@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="priority_chip" type="id" />
+
+    <item name="task_date" type="id" />
+    <item name="piechart" type="id" />
+
+</resources>
